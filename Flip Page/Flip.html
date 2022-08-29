@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dammi</title>
+    <link rel="stylesheet" href="Flip.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="product">
+            <img src="shoes.png" alt="" id="front-img">
+            <img src="shoes2.png" alt="" id="back-img">
+            <div class="product-inner" id="product-box">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Nike running Shoes</p>
+                        <h2> 
+                            Air zoom winflo
+                        </h2>
+                        <h1><span>$</span>124</h1>
+                        <button type="button">Add to bag</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="shoes-icon.png" alt="" >
+                            </div>
+                            <div class="select-item">
+                                <img src="shoes-icon2.png" alt="" onclick="flipright()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+
+                    <div class="product-top product-top2">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Nike running Shoes</p>
+                        <h2> 
+                            Air zoom winflo
+                        </h2>
+                        <h1><span>$</span>124</h1>
+                        <button type="button">Add to bag</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="shoes-icon.png" alt="" onclick="flipleft()">
+                            </div>
+                            <div class="select-item">
+                                <img src="shoes-icon2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+
+            </div>
+        </div>
+    </div>    
+
+    <script>
+        var product = document.getElementById("product-box");
+        var front=document.getElementById("front-img");
+        var back=document.getElementById("back-img");
+
+        function flipright()
+        {
+            product.style.transform="rotateY(180deg)";
+            front.style.left="610px";
+            back.style.left="20px";
+            front.style.transform="rotate(-30deg)";
+            back.style.transform="rotate(0deg)"
+
+        }
+        function flipleft()
+        {
+            product.style.transform="rotateY(0deg)";
+            front.style.left="0px";
+            back.style.left="-610px";
+            front.style.transform="rotate(0deg)";
+            back.style.transform="rotate(-30deg)"
+
+
+        }
+    </script>
+</body>
+</html>
